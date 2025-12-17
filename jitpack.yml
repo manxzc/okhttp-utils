@@ -1,0 +1,9 @@
+jdk:
+  - openjdk17
+
+before_install:
+  - export GROUP=com.github.manxzc # 替换为你的GitHub用户名
+  - export VERSION_NAME=1.0.1 # 版本号根据实际情况调整
+
+install:
+  - ./gradlew :okhttp-utils:publishToMavenLocal # 确保使用正确的模块名称

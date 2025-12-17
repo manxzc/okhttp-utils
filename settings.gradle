@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ZcOkHttpLib"
-include ':app'
+//include ':app'
 include ':okhttp'
