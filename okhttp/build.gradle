@@ -30,7 +30,20 @@ android {
         jvmTarget = '17'
     }
 }
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                // 支持 Android 库自动配置
+                from components.release
 
+                groupId = 'com.github.manxzc'
+                artifactId = 'ZcOkHttpLib'
+                version = '1.0.6' // 或从命令行传入：project.version
+            }
+        }
+    }
+}
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
